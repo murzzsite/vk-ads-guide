@@ -63,6 +63,12 @@
   .cta{margin-top:20px; background:var(--accent-light); border:1px solid var(--accent-mid); border-radius:14px; padding:20px 22px; text-align:center;}
   .cta h2{font-size:20px; margin-bottom:6px;} .cta p{margin:0; color:var(--text-2);}
   @media (max-width:520px){ .cmp{grid-template-columns:1fr;} }
+  .team{background:#fff; border:1px solid var(--accent-mid); border-radius:14px; padding:16px 18px; margin-top:16px; display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .team h3{font-size:15px; margin-bottom:6px; color:var(--accent-dark);}
+  .team ul{margin:0 0 0 18px; padding:0; color:var(--text-2); font-size:14.5px;}
+  .team li{margin:3px 0;}
+  .team .full{grid-column:1/-1; font-size:13.5px; color:var(--text-3);}
+  @media (max-width:560px){ .team{grid-template-columns:1fr;} }
 </style>
 </head>
 <body>
@@ -83,6 +89,13 @@
     <a href="#v6">6. Запуск</a>
     <a href="#v7">7. Результаты</a>
   </nav>
+
+  <div class="team">
+    <div><h3>Подготовим мы</h3><ul><li>выбор цели и аудитории</li><li>тексты и заголовки объявлений</li><li>рекомендации по бюджету</li><li>разбор результатов и что поправить</li></ul></div>
+    <div><h3>От вас</h3><ul><li>открыть кабинет и пополнить баланс</li><li>загрузить готовые тексты и картинки</li><li>нажать «Запустить»</li></ul></div>
+    <div class="full">Рекламный кабинет и деньги должны быть именно у вас: так бюджет полностью под вашим контролем. Мы подготовим всё остальное и подскажем, куда нажимать. <a href="https://murzzsite.github.io/seo-work-guide/">Что ещё мы делаем для вашего сайта</a></div>
+  </div>
+
 
   <section class="step" id="v1">
     <div class="step-head"><div class="num">1</div><h2>Откройте рекламный кабинет</h2></div>
