@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VK Реклама — пошаговая инструкция</title>
+<meta name="description" content="Как запустить рекламу во ВКонтакте самостоятельно: кабинет, цель, аудитория, бюджет, объявление и результаты.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#ffffff; --bg-2:#f8faff; --border:#e2e8f0; --text:#0f172a; --text-2:#475569; --text-3:#94a3b8;
+    --accent:#2563eb; --accent-dark:#1d4ed8; --accent-light:#eff6ff; --accent-mid:#dbeafe;
+    --green:#16a34a; --green-light:#dcfce7; --amber:#b45309; --amber-light:#fef3c7;
+    --shadow:0 4px 24px rgba(37,99,235,0.08);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg); color:var(--text); font-family:'Inter',system-ui,sans-serif; font-size:16px; line-height:1.55; padding-inline:16px;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif; text-wrap:balance; margin:0;}
+  a{color:var(--accent);}
+  .wrap{max-width:760px; margin:0 auto; padding:24px 0 56px;}
+
+  .hero{background:linear-gradient(135deg,var(--accent),var(--accent-dark)); color:#fff; border-radius:18px; padding:32px 28px; position:relative; overflow:hidden;}
+  .hero::after{content:""; position:absolute; top:-60px; right:-60px; width:200px; height:200px; background:rgba(255,255,255,.08); border-radius:50%;}
+  .eyebrow{font-size:12px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; opacity:.85; margin-bottom:10px;}
+  .hero h1{font-size:clamp(26px,5vw,34px); line-height:1.15;}
+  .hero p{margin:14px 0 0; color:#dbeafe; max-width:520px;}
+
+  .toc{display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 4px;}
+  .toc a{text-decoration:none; background:var(--accent-light); color:var(--accent-dark); border:1px solid var(--accent-mid); padding:6px 12px; border-radius:999px; font-size:13.5px; font-weight:500;}
+
+  .step{background:var(--bg-2); border:1px solid var(--border); border-left:4px solid var(--accent); border-radius:12px; padding:20px 22px; margin-top:16px; box-shadow:var(--shadow);}
+  .step-head{display:flex; align-items:center; gap:12px; margin-bottom:10px;}
+  .num{flex-shrink:0; width:32px; height:32px; border-radius:50%; background:var(--accent); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; display:flex; align-items:center; justify-content:center;}
+  .step h2{font-size:19px;}
+  .step p{margin:8px 0; color:var(--text-2);}
+  .step ul,.step ol{margin:8px 0 8px 20px; padding:0; color:var(--text-2);}
+  .step li{margin:5px 0;}
+  .step b{color:var(--text);}
+  .chip{display:inline-block; background:var(--accent-mid); color:var(--accent-dark); font-weight:600; font-size:13.5px; padding:2px 9px; border-radius:6px;}
+
+  .note{border-radius:10px; padding:12px 14px; margin:12px 0 4px; font-size:14.5px;}
+  .note.tip{background:var(--green-light); color:#14532d;}
+  .note.warn{background:var(--amber-light); color:#78350f;}
+
+  table{width:100%; border-collapse:collapse; margin:10px 0; font-size:14.5px;}
+  th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top;}
+  th{color:var(--text); font-weight:600; background:var(--accent-light);}
+  td{color:var(--text-2);}
+
+  .foot{margin-top:28px; color:var(--text-3); font-size:13.5px; text-align:center;}
+  @media (max-width:520px){ .hero{padding:26px 20px;} .step{padding:16px;} }
+  .cmp{display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:12px 0;}
+  .cmp div{border-radius:12px; padding:14px 16px; font-size:14.5px;}
+  .cmp .bad{background:#fef2f2; border:1px solid #fecaca; color:#7f1d1d;}
+  .cmp .good{background:var(--green-light); border:1px solid #bbf7d0; color:#14532d;}
+  .cmp b{display:block; margin-bottom:6px; font-family:'Space Grotesk',sans-serif; font-size:15.5px; color:inherit;}
+  .cmp ul{margin:0 0 0 18px; padding:0; color:inherit;}
+  .url{font-family:ui-monospace,Consolas,monospace; font-size:13.5px; background:#fff; border:1px solid var(--border); border-radius:8px; padding:6px 10px; display:inline-block; margin:2px 0; word-break:break-all;}
+  .cta{margin-top:20px; background:var(--accent-light); border:1px solid var(--accent-mid); border-radius:14px; padding:20px 22px; text-align:center;}
+  .cta h2{font-size:20px; margin-bottom:6px;} .cta p{margin:0; color:var(--text-2);}
+  @media (max-width:520px){ .cmp{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Инструкция</div>
+    <h1>Как запустить рекламу в VK Рекламе</h1>
+    <p>Пошагово и простыми словами. VK Реклама показывает объявление людям по интересам и возрасту в ленте и сообществах ВКонтакте, а не только тем, кто уже ищет вашу услугу.</p>
+  </header>
+
+  <nav class="toc" aria-label="Содержание">
+    <a href="#v1">1. Кабинет</a>
+    <a href="#v2">2. Цель</a>
+    <a href="#v3">3. Аудитория</a>
+    <a href="#v4">4. Бюджет</a>
+    <a href="#v5">5. Объявление</a>
+    <a href="#v6">6. Запуск</a>
+    <a href="#v7">7. Результаты</a>
+  </nav>
+
+  <section class="step" id="v1">
+    <div class="step-head"><div class="num">1</div><h2>Откройте рекламный кабинет</h2></div>
+    <ol>
+      <li>Перейдите на <a href="https://ads.vk.com" target="_blank" rel="noopener">ads.vk.com</a> и войдите через свой аккаунт ВКонтакте.</li>
+      <li>Выберите тип кабинета: физлицо, ИП или организация, и заполните основные данные.</li>
+      <li>Если у вас есть сообщество ВКонтакте, подключите его, и объявления будут показываться от его имени.</li>
+    </ol>
+    <div class="note warn">Для рекламы в России нужно пройти маркировку: рекламодатель вносит данные в кабинет, а креативу присваивается токен. Кабинет подскажет, что заполнить.</div>
+  </section>
+
+  <section class="step" id="v2">
+    <div class="step-head"><div class="num">2</div><h2>Выберите цель рекламы</h2></div>
+    <p>Нажмите <span class="chip">Создать кампанию</span> и определите, чего хотите добиться.</p>
+    <table>
+      <tr><th>Цель</th><th>Когда подходит</th></tr>
+      <tr><td>Сайт (заявки и продажи)</td><td>Хотите, чтобы человек перешёл на сайт и оставил заявку. Подходит для большинства услуг.</td></tr>
+      <tr><td>Лид-форма</td><td>Нужна заявка без перехода на сайт: человек оставляет контакты прямо во ВКонтакте.</td></tr>
+      <tr><td>Сообщения сообществу</td><td>Хотите, чтобы писали в личные сообщения.</td></tr>
+    </table>
+    <div class="note tip">Для первого запуска лучше выбрать «Сайт»: тогда реклама ведёт на ваш домен, а заявки приходят с формы.</div>
+  </section>
+
+  <section class="step" id="v3">
+    <div class="step-head"><div class="num">3</div><h2>Настройте аудиторию</h2></div>
+    <p>Здесь вы решаете, кому показывать объявление.</p>
+    <ul>
+      <li><b>География:</b> укажите город или область, где вы работаете.</li>
+      <li><b>Пол и возраст:</b> выберите тех, кому услуга подходит. Если не уверены, начните с широкого диапазона.</li>
+      <li><b>Интересы и сообщества:</b> добавьте тематики, которые связаны с вашей услугой, и группы, где сидят ваши клиенты.</li>
+      <li><b>Ключевые фразы:</b> реклама может показываться тем, кто искал или обсуждал похожие темы.</li>
+    </ul>
+    <div class="note warn">Слишком узкая аудитория (меньше нескольких тысяч человек) работает плохо, а слишком широкая тратит деньги впустую. Ориентир: от 50 до 500 тысяч человек.</div>
+  </section>
+
+  <section class="step" id="v4">
+    <div class="step-head"><div class="num">4</div><h2>Установите бюджет и пополните счёт</h2></div>
+    <ul>
+      <li><b>Дневной бюджет:</b> для старта хватает 500–1 000 ₽ в день. Меньше собрать данные трудно.</li>
+      <li><b>Срок теста:</b> дайте рекламе поработать 5–7 дней, прежде чем делать выводы.</li>
+      <li><b>Пополнение:</b> раздел «Баланс» → «Пополнить». Картой оплата проходит сразу, по счёту для организаций дольше.</li>
+    </ul>
+    <div class="note warn">Без денег на балансе реклама не показывается, даже если объявление прошло модерацию.</div>
+  </section>
+
+  <section class="step" id="v5">
+    <div class="step-head"><div class="num">5</div><h2>Создайте объявление</h2></div>
+    <table>
+      <tr><th>Элемент</th><th>Что делать</th></tr>
+      <tr><td>Картинка или видео</td><td>Живое фото услуги, результата или специалиста. Без стоковых «улыбающихся людей» и мелкого текста.</td></tr>
+      <tr><td>Заголовок</td><td>Одна понятная выгода: «Бухгалтер для ИП от 3 000 ₽ в месяц»</td></tr>
+      <tr><td>Текст</td><td>Для кого это, что получите, чем отличаетесь, что делать дальше</td></tr>
+      <tr><td>Кнопка</td><td>«Узнать больше», «Записаться» или «Оставить заявку»</td></tr>
+      <tr><td>Ссылка</td><td>Адрес вашего сайта (после переноса — ваш домен)</td></tr>
+    </table>
+    <div class="note tip">Сделайте 2–3 разных объявления с разными заголовками и картинками. Через неделю будет видно, какое работает лучше, и слабое можно отключить.</div>
+  </section>
+
+  <section class="step" id="v6">
+    <div class="step-head"><div class="num">6</div><h2>Отправьте на модерацию</h2></div>
+    <ol>
+      <li>Проверьте аудиторию, бюджет, тексты и ссылку.</li>
+      <li>Нажмите «Запустить» / «Отправить на модерацию».</li>
+      <li>Проверка занимает от нескольких минут до нескольких часов.</li>
+    </ol>
+    <p>Если объявление отклонили, в кабинете будет указана причина. Обычно это слишком громкие обещания, запрещённая тематика или некорректная ссылка. Исправьте и отправьте снова.</p>
+  </section>
+
+  <section class="step" id="v7">
+    <div class="step-head"><div class="num">7</div><h2>Смотрите результаты</h2></div>
+    <table>
+      <tr><th>Показатель</th><th>Что значит</th></tr>
+      <tr><td>Показы</td><td>Сколько раз увидели ваше объявление</td></tr>
+      <tr><td>Клики</td><td>Сколько человек перешло на сайт</td></tr>
+      <tr><td>Цена клика</td><td>Сколько стоит один переход</td></tr>
+      <tr><td>Заявки</td><td>Сколько людей оставили контакты</td></tr>
+      <tr><td>Цена заявки</td><td>Расходы, делённые на число заявок. Главный показатель.</td></tr>
+    </table>
+    <ul>
+      <li>Отвечайте на заявки в течение 5–15 минут: чем быстрее, тем выше шанс договориться.</li>
+      <li>Через 5–7 дней отключите объявления с высокой ценой заявки и добавьте бюджет лучшим.</li>
+      <li>Если заявок мало, пришлите нам скриншот отчёта, и мы подскажем, что поправить.</li>
+    </ul>
+  </section>
+
+  <p class="foot">Остались вопросы? Напишите нам в ответ на сообщение, и мы поможем с настройкой.</p>
+</div>
+</body>
+</html>
